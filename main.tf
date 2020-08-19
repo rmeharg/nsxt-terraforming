@@ -23,16 +23,6 @@ module "t0_gateway" {
   t0_gateway_ip_addresses   = var.t0_gateway_ip_addresses
 }
 
-module "t1_gateway_automation" {
-  source = "./modules/t1"
-
-  edge_cluster    = var.edge_cluster
-  t0_gateway_path = module.t0_gateway.path
-  overlay_tz      = var.overlay_tz
-  t1_gateway_name = var.t1_gateway_automation
-  t1_gateway_cidr = var.t1_gateway_automation_cidr
-}
-
 module "t1_gateway_infra" {
   source = "./modules/t1"
 
@@ -60,24 +50,6 @@ module "snat_rule" {
   rule_name       = var.snat_rule_name
   cidr            = var.snat_cidr
   public_ip       = var.snat_public_ip
-}
-
-module "jumpbox_dnat_rule" {
-  source = "./modules/dnat"
-
-  t0_gateway_path = module.t0_gateway.path
-  rule_name       = var.jumpbox_dnat_rule_name
-  public_ip       = var.jumpbox_public_ip
-  private_ip      = var.jumpbox_private_ip
-}
-
-module "concourse_dnat_rule" {
-  source = "./modules/dnat"
-
-  t0_gateway_path = module.t0_gateway.path
-  rule_name       = var.concourse_dnat_rule_name
-  public_ip       = var.concourse_public_ip
-  private_ip      = var.concourse_private_ip
 }
 
 module "opsmanager_dnat_rule" {

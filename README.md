@@ -24,13 +24,11 @@ When the `apply` is executed, the following objects are created and tagged:
 
 - 1 T0 Gateway
 
-- 3 T1 Gateway
-  - AUTOMATION (Concourse)
+- 2 T1 Gateways
   - INFRASTRUCTURE (OpsManager)
   - TKGI
 
-- 4 Segments (Switches)
-  - AUTOMATION
+- 3 Segments (Switches)
   - INFRASTRUCTURE
   - TKGI
   - UPLINKS
@@ -42,7 +40,5 @@ When the `apply` is executed, the following objects are created and tagged:
   - SNAT private CIDR's to external
   - DNAT to OpsManager VM
   - DNAT to TKGI API
-  - DNAT to Jumpbox VM
-  - DNAT to Concourse Web
 
 - 1 Small load balancer

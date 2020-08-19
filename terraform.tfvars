@@ -13,9 +13,6 @@ static_route_next_hop     = "10.0.0.1"
 t0_segment                = "UPLINKS"
 vlan_ids                  = ["0"]
 
-t1_gateway_automation      = "AUTOMATION"
-t1_gateway_automation_cidr = ["192.168.2.1/24"]
-
 t1_gateway_infra      = "INFRASTRUCTURE"
 t1_gateway_infra_cidr = ["192.168.3.1/26"]
 
@@ -25,14 +22,6 @@ t1_gateway_tkgi_cidr = ["192.168.4.1/23"]
 snat_rule_name = "INTERNAL-TO-EXTERNAL"
 snat_cidr      = ["192.168.0.0/16"]
 snat_public_ip = ["10.0.0.29"]
-
-jumpbox_dnat_rule_name = "JUMPBOX"
-jumpbox_public_ip      = ["10.0.0.30"]
-jumpbox_private_ip     = ["192.168.2.10"]
-
-concourse_dnat_rule_name = "CONCOURSE"
-concourse_public_ip      = ["10.0.0.31"]
-concourse_private_ip     = ["192.168.2.21"]
 
 opsmanager_dnat_rule_name = "OPSMANAGER"
 opsmanager_public_ip      = ["10.0.0.32"]
