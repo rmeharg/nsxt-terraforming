@@ -1,4 +1,4 @@
-NSX-T terraform
+NSX-T Terraform
 ---
 
 ## What does this repository provide?
