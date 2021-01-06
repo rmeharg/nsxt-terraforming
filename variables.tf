@@ -16,33 +16,13 @@ variable "vlan_ids" {
   type = list(string)
 }
 
-variable "t1_gateway_automation" {}
-variable "t1_gateway_automation_cidr" {
-  type = list(string)
-}
-
 variable "t1_gateway_infra" {}
 variable "t1_gateway_infra_cidr" {
   type = list(string)
 }
 
-variable "t1_gateway_tas" {}
-variable "t1_gateway_tas_cidr" {
-  type = list(string)
-}
-
-variable "t1_gateway_services" {}
-variable "t1_gateway_services_cidr" {
-  type = list(string)
-}
-
 variable "t1_gateway_tkgi" {}
 variable "t1_gateway_tkgi_cidr" {
-  type = list(string)
-}
-
-variable "t1_gateway_tkg" {}
-variable "t1_gateway_tkg_cidr" {
   type = list(string)
 }
 
@@ -54,22 +34,6 @@ variable "snat_public_ip" {
   type = list(string)
 }
 
-variable "jumpbox_dnat_rule_name" {}
-variable "jumpbox_public_ip" {
-  type = list(string)
-}
-variable "jumpbox_private_ip" {
-  type = list(string)
-}
-
-variable "concourse_dnat_rule_name" {}
-variable "concourse_public_ip" {
-  type = list(string)
-}
-variable "concourse_private_ip" {
-  type = list(string)
-}
-
 variable "opsmanager_dnat_rule_name" {}
 variable "opsmanager_public_ip" {
   type = list(string)
@@ -78,18 +42,10 @@ variable "opsmanager_private_ip" {
   type = list(string)
 }
 
-variable "tas_ip_block_name" {}
-variable "tas_ip_block_cidr" {}
 variable "tkgi_nodes_ip_block_name" {}
 variable "tkgi_nodes_ip_block_cidr" {}
 variable "tkgi_pods_ip_block_name" {}
 variable "tkgi_pods_ip_block_cidr" {}
-
-variable "tas_snat_ip_pool_name" {}
-variable "tas_snat_ip_pool_range_start" {}
-variable "tas_snat_ip_pool_range_end" {}
-variable "tas_snat_ip_pool_cidr" {}
-variable "tas_snat_ip_pool_gateway" {}
 
 variable "tkgi_snat_ip_pool_name" {}
 variable "tkgi_snat_ip_pool_range_start" {}
@@ -100,39 +56,10 @@ variable "tkgi_snat_ip_pool_gateway" {}
 variable "workload_lb_name" {}
 variable "workload_lb_type" {}
 
-variable "router_ns_group_name" {}
-variable "router_server_pool_name" {}
-variable "router_public_ip" {}
-variable "router_lb_application_profile" {}
-variable "router_active_lb_monitor_name" {}
-variable "router_passive_lb_monitor_name" {}
-
-variable "diego_brain_ns_group_name" {}
-variable "diego_brain_server_pool_name" {}
-variable "diego_brain_public_ip" {}
-variable "diego_brain_lb_application_profile" {}
-variable "diego_brain_active_lb_monitor_name" {}
-variable "diego_brain_passive_lb_monitor_name" {}
-
-variable "istio_router_ns_group_name" {}
-variable "istio_router_server_pool_name" {}
-variable "istio_router_server_public_ip" {}
-variable "istio_router_lb_application_profile" {}
-variable "istio_router_active_lb_monitor_name" {}
-variable "istio_router_passive_lb_monitor_name" {}
-
 variable "tkgi_dnat_rule_name" {}
 variable "tkgi_api_private_ip" {
   type = list(string)
 }
 variable "tkgi_public_ip" {
-  type = list(string)
-}
-
-variable "harbor_dnat_rule_name" {}
-variable "harbor_private_ip" {
-  type = list(string)
-}
-variable "harbor_public_ip" {
   type = list(string)
 }
